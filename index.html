@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+    body{
+        background-color: bisque;
+        display: grid;
+        grid-template-columns: 0.2fr 0.2fr 0.2fr 0.2fr ;
+        grid-template-rows: 1fr;
+    }
+    button{
+        background-color: aqua;
+        width: 83px;
+        border-radius: 10px;
+        margin-top: 10px;
+    }
+
+    .container{
+        grid-template-columns: auto;
+        display: inline-block;
+        border: 2px solid rgb(45, 32, 32);
+        width: 120px;
+        height: 80px;
+        margin-top:10px;
+        font-size: larger;
+        background-color: blueviolet;
+        text-align: center;
+    }
+    .divi{
+        background-color: aqua;
+        
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="divi" id="bus"></div>
+        <button id="id1">Bus</button>
+        <button id="neg1">-</button>
+    </div>
+    <div class="container">
+        <div class="divi" id="car"></div>
+        <button id="id2">Car</button>
+        <button id="neg2">-</button>
+    </div>
+    <div class="container">
+        <div class="divi" id="threeWh"></div>
+        <button id="id3">Three Wheel</button>
+        <button id="neg3">-</button>
+    </div>
+    <div class="container">
+        <div class="divi" id="cycle"></div>
+        <button id="id4">Cycle</button>
+        <button id="neg4">-</button>
+    </div>
+    <div class="container">
+        <div class="divi" id="bike"></div>
+        <button id="id5">Bike</button>
+        <button id="neg5">-</button>
+    </div>
+    <div class="container">
+        <div class="divi" id="rickshaw"></div>
+        <button id="id6">Rickshaw</button>
+        <button id="neg6">-</button>
+    </div>
+    <div class="container">
+        <div class="divi" id="lcv"></div>
+        <button id="id7">LCV</button>
+        <button id="neg7">-</button>
+    </div>
+    <div class="container">
+        <div class="divi" id="hcv"></div>
+        <button id="id8">HCV</button>
+        <button id="neg8">-</button>
+    </div>
+</body>
+<script>
+    let bus = document.getElementById('bus');
+    let car = document.getElementById('car');
+    let threeW = document.getElementById('threeWh');
+    let cycle = document.getElementById('cycle');
+    let bike = document.getElementById('bike');
+    let rickshaw = document.getElementById('rickshaw');
+    let lcv = document.getElementById('lcv');
+    let hcv = document.getElementById('hcv');
+    let id1=document.getElementById('id1');
+    let id2=document.getElementById('id2');
+    let id3=document.getElementById('id3');
+    let id4=document.getElementById('id4');
+    let id5=document.getElementById('id5');
+    let id6=document.getElementById('id6');
+    let id7=document.getElementById('id7');
+    let id8=document.getElementById('id8');
+    let neg1=document.getElementById('neg1');
+    let neg2=document.getElementById('neg2');
+    let neg3=document.getElementById('neg3');
+    let neg4=document.getElementById('neg4');
+    let neg5=document.getElementById('neg5');
+    let neg6=document.getElementById('neg6');
+    let neg7=document.getElementById('neg7');
+    let neg8=document.getElementById('neg8');
+    let c1 = 0, c2 = 0, c3=0, c4=0, c5=0, c6=0, c7=0, c8=0;
+    bus.innerText = c1;
+    car.innerText = c2;
+    threeW.innerText = c3;
+    cycle.innerText = c4;
+    bike.innerText = c5;
+    rickshaw.innerText = c6;
+    lcv.innerText = c7;
+    hcv.innerText = c8;
+    // window.addEventListener('keydown', (e) => {
+    //     switch (e.key) {
+    //         case "ArrowUp":
+    //             c1 = c1 + 1;
+    //             bus.innerText = c1;
+    //             break;
+    //         case "ArrowDown":
+    //             c1 = c1 - 1;
+    //             if(c1<0){
+    //                 alert("Bus count cannot be negative");
+    //             }
+    //             bus.innerText = c1;
+    //             break;
+    //         case "ArrowRight":
+    //             c2 = c2 + 1;
+    //             car.innerText = c2;
+    //             break;
+    //         case "ArrowLeft":
+    //             c2 = c2 - 1;
+    //             if(c2<0){
+    //                 alert("Car count cannot be negative");
+    //             }
+    //             car.innerText = c2;
+    //             break;
+    //     }
+    // })
+    id1.addEventListener('click', ()=>{
+        c1=c1+1;
+        bus.innerHTML=c1;
+    })
+    id2.addEventListener('click', ()=>{
+        c2=c2+1;
+        car.innerHTML=c2;
+    })
+    id3.addEventListener('click', ()=>{
+        c3=c3+1;
+        threeW.innerHTML=c3;
+    })
+    id4.addEventListener('click', ()=>{
+        c4=c4+1;
+        cycle.innerHTML=c4;
+    })
+    id5.addEventListener('click', ()=>{
+        c5=c5+1;
+        bike.innerHTML=c5;
+    })
+    id6.addEventListener('click', ()=>{
+        c6=c6+1;
+        rickshaw.innerHTML=c6;
+    })
+    id7.addEventListener('click', ()=>{
+        c7=c7+1;
+        lcv.innerHTML=c7;
+    })
+    id8.addEventListener('click', ()=>{
+        c8=c8+1;
+        hcv.innerHTML=c8;
+    })
+    
+    neg1.addEventListener('click', ()=>{
+        c1=c1-1;
+        if(c1<0) alert('Bus Cant be Negative');
+        bus.innerHTML=c1;
+    })
+    neg2.addEventListener('click', ()=>{
+        c2=c2-1;
+        if(c2<0) alert('Car Cant be Negative');
+        car.innerHTML=c2;
+    })
+    neg3.addEventListener('click', ()=>{
+        c3=c3-1;
+        if(c3<0) alert('ThreeWheeler Cant be Negative');
+        threeW.innerHTML=c3;
+    })
+    neg4.addEventListener('click', ()=>{
+        c4=c4-1;
+        if(c4<0) alert('Cycle Cant be Negative');
+        cycle.innerHTML=c4;
+    })
+    neg5.addEventListener('click', ()=>{
+        c5=c5-1;
+        if(c5<0) alert('Bike Cant be Negative');
+        bike.innerHTML=c5;
+    })
+    neg6.addEventListener('click', ()=>{
+        c6=c6-1;
+        if(c6<0) alert('Rickshaw Cant be Negative');
+        rickshaw.innerHTML=c6;
+    })
+    neg7.addEventListener('click', ()=>{
+        c7=c7-1;
+        if(c7<0) alert('LCV Cant be Negative');
+        lcv.innerHTML=c7;
+    })
+    neg8.addEventListener('click', ()=>{
+        c8=c8-1;
+        if(c8<0) alert('HCV Cant be Negative');
+        hcv.innerHTML=c8;
+    })
+</script>
+
+</html>
